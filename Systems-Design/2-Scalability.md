@@ -22,7 +22,7 @@
 - hire DBA
 - master-slave replication (read to slave databases, write to master)
 - add more and more RAM
-- every action after sharding, denormalization, SQL tuning  will be more expensive
+- every action after denormalization, SQL tuning  will be more expensive
 ### Path 2
 - denormalize from the beginning
 - switch to mongoDB (more scalability)
