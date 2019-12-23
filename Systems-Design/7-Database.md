@@ -111,6 +111,8 @@ Eventual consistency- the system will become consistent over a time period given
 - Cassandra and HBase maintain keys in lexicographical order allowing retrieval of key ranges
 - wide column stores offer high availability and scalability, for large data sets 
 
+![](https://camo.githubusercontent.com/823668b07b4bff50574e934273c9244e4e5017d6/687474703a2f2f692e696d6775722e636f6d2f6e3136694f476b2e706e67)
+
 ### Graph Database
 - abstraction of a graph
 - in a graph database, each node is a record and each arc is a relationship between two nodes
