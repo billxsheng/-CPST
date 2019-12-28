@@ -29,7 +29,11 @@
 - cache levels fall into two general categories, database queries and objects 
 - we want to avoid file-based caching because it makes cloning and auto-scaling hard
 
-### LRU 
+### LRU Cache
+- Cache data structure used to figure out what should be evicted when the cache is full
+- Goal is to always have least recently used item accessible in O(1) times
+- Doubly linked list with a hash map
+- Evicts least recently used items when memory is low
 
 
 ## Caching at the database query level
