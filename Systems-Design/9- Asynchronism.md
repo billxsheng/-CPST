@@ -14,6 +14,26 @@
 - Redis is useful as a simple message broker but messages can be lost
 - RabbitMQ is popular but requires you to adapt to AMQP protocol and manage nodes
 
+### Queuing 
+- A pool of consumers may read from a server and each record goes to ONE of them
+- Queuing allows you to divide up the processing of data over multiple consumer instances (scalable)
+- Are not multi-subscriber
+### Pub/Sub
+- Any message published to a topic is immediately received by all of the subscribers to the topic
+- The record is broadcast to all consumers
+- Allows you to broadcast data to multiple processes, but no way of scaling process since every message goes to every subscriber
+
+### Kafka
+- Messaging: Each consumer is assigned to one topic partition so that data is in order and processing occurs in-parallel 
+- Storage: Data is written to disk and replicated, Kafka disk structures also scale well 
+- Streaming: Producer and Consumer APIs allow for simple processing
+    - Streams API can be used for complex transformations
+- By combining storage and subscriptions, streaming apps can treat both past and future data the same way
+    - Historical data can be processed and can continue once it reaches the end
+    - Includes batch processing 
+- Ability to store data makes it possible to use Kafka for critical data where delivery must be guaranteed or for integration with systems that load data periodically 
+    - Can combine real-time events with subscriptions
+
 ## Task Queues
 - Receives tasks, runs them, delivers results
 - Support scheduling and can used to run intensive jobs in the background
