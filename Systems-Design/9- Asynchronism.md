@@ -25,7 +25,7 @@
 
 ### Kafka
 - distributed streaming platform
-- Popular because it includes the broker itself (brokers receive messages from producers and stores them on disk keyed by an offset)
+- Popular because it includes the broker itself (brokers receive messages from producers and stores them on disk keyed by an offset, basically a server or nodes within cluster)
 - Messaging: Each consumer is assigned to one topic partition so that data is in order and processing occurs in-parallel 
 - Storage: Data is written to disk and replicated, Kafka disk structures also scale well 
 - Streaming: Producer and Consumer APIs allow for simple processing
