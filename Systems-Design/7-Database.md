@@ -9,6 +9,9 @@
     - Consistency- Any transaction will bring the db from one valid state to another
     - Isolation- Executing transactions concurrently has the same results as if the transactions were executed serially
     - Durability- Once a transaction has been committed, it will remain so. Database should hold updates even if system fails or restarts.
+- write ahead logging is the concept of forcing the log record for an update before the data page gets to disk
+- must write all log records for a transaction
+- ensures atomicity and durability
 
 ### Scaling a RDBMS
 #### Master-slave Replication
@@ -37,6 +40,8 @@
 - Common way to shard is to use user last name initial or user location
 - Disadvantage is that you will need to update app logic to work with shards, complex SQL queries, data distribution can become lopsided (rebalancing adds additional complexity or you can use a sharding function to properly distribute data)
 - Joining data from multiple shards as well as adding more hardware increases complexity 
+- Vertical sharding stores tables/columns in a seperate database or table
+- Horizontal sharding stores rows in multiple database clusters
 
 #### Denormalization
 - Improves read performance at the expense of write performance
@@ -139,3 +144,8 @@ Eventual consistency- the system will become consistent over a time period given
 - no need for complex joins
 - store TB of data
 - very data intensive workload 
+
+## Storing metadata and data separately
+- data is the image
+- metadata are descriptions of the images 
+- stored separately because they serve different purposes

@@ -1,4 +1,7 @@
 # Trade-offs
+## Reading from disk/memory
+- Reading from the disk is cheaper but has high latency
+- Reading from the disk is more expensive but has low latency
 ## Performance vs Scalability
 > A service is scalable if it results in increased performance in a manner proportional to resources added.
 > Generally, increasing performance means serving more units of work, but it can also be to handle larger units of work such as when datasets grow
