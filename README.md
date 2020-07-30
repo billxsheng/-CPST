@@ -1,2 +1,2 @@
 # systems-design
-A repo to explore common computer science/systems design concepts. 
+A repo to explore fundamental computer science/systems design concepts. 
